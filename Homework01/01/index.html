@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Student Registry</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Registry</h1>
+
+      <form id="studentForm">
+        <div class="input-group">
+          <div class="input-group-wrapper">
+            <input type="text" id="firstName" name="firstName" placeholder="" />
+            <label for="firstName">Enter your first name</label>
+          </div>
+          <ul id="firstNameError" class="errorField"></ul>
+        </div>
+
+        <div class="input-group">
+          <div class="input-group-wrapper">
+            <input type="text" id="lastName" name="lastName" placeholder="" />
+            <label for="lastName">Enter your last name</label>
+          </div>
+          <ul id="lastNameError" class="errorField"></ul>
+        </div>
+
+        <div class="input-group">
+          <div class="input-group-wrapper">
+            <input type="number" id="age" name="age" placeholder="" />
+            <label for="age">Enter your age</label>
+          </div>
+          <ul id="ageError" class="errorField"></ul>
+        </div>
+
+        <div class="input-group">
+          <div class="input-group-wrapper">
+            <input type="text" id="email" name="email" placeholder="" />
+            <label for="email">Enter your email</label>
+          </div>
+          <ul id="emailError" class="errorField"></ul>
+        </div>
+
+        <button type="submit">Register Student</button>
+      </form>
+
+      <div class="separator"></div>
+
+      <h2>Database</h2>
+      <ol id="studentList"></ol>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

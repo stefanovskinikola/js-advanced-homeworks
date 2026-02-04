@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Reminder App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Reminder App</h1>
+
+      <form id="reminderForm">
+        <div class="input-group">
+          <div class="input-group-wrapper">
+            <input type="text" id="title" name="title" placeholder="" />
+            <label for="title">Enter title</label>
+          </div>
+          <ul id="titleError" class="errorField"></ul>
+        </div>
+
+        <div class="input-group">
+          <div class="input-group-wrapper">
+            <input type="number" id="priority" name="priority" placeholder="" />
+            <label for="priority">Enter priority (1-5)</label>
+          </div>
+          <ul id="priorityError" class="errorField"></ul>
+        </div>
+
+        <div class="input-group">
+          <div class="color-wrapper">
+            <label for="color">Pick a color</label>
+            <input type="color" id="color" name="color" value="#e6e6e6" />
+          </div>
+          <ul id="colorError" class="errorField"></ul>
+        </div>
+
+        <div class="input-group">
+          <div class="input-group-wrapper">
+            <!-- prettier-ignore -->
+            <textarea id="description" name="description" placeholder=""></textarea>
+            <label for="description">Enter description</label>
+          </div>
+          <ul id="descriptionError" class="errorField"></ul>
+        </div>
+
+        <button type="submit" id="addBtn">Add Reminder</button>
+        <button type="button" id="showBtn">Show All Reminders</button>
+      </form>
+
+      <div class="separator hidden"></div>
+
+      <h2 class="hidden">All Reminders</h2>
+
+      <div class="table-container hidden" id="tableContainer">
+        <table id="reminderTable">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Priority</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody id="reminderTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
