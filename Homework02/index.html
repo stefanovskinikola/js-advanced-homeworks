@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Star Wars Planets</title>
+  </head>
+  <body>
+    <h1>Star Wars Planets</h1>
+
+    <div class="errorMsg hidden"></div>
+    <table id="planetsTable" class="hidden">
+      <thead>
+        <tr>
+          <th>Planet Name</th>
+          <th>Population</th>
+          <th>Climate</th>
+          <th>Gravity</th>
+        </tr>
+      </thead>
+      <tbody id="planetsBody"></tbody>
+    </table>
+
+    <div class="btn-container">
+      <button id="loadBtn">Get Planets</button>
+      <button id="prevBtn" class="hidden">Previous 10</button>
+      <button id="nextBtn" class="hidden">Next 10</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
