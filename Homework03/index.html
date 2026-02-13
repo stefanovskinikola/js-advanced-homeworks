@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Homework #3 - High order functions</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="nav-btns">
+          <button class="nav-btn" data-task="task1" data-script="./tasks/01.js">
+            Task 1 - Students
+          </button>
+          <button class="nav-btn" data-task="task2" data-script="./tasks/02.js">
+            Task 2 - Products
+          </button>
+          <button class="nav-btn" data-task="task3" data-script="./tasks/03.js">
+            Task 3 - Recipes
+          </button>
+          <button class="nav-btn" data-task="task4" data-script="./tasks/04.js">
+            Task 4 - Carts
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <section id="task1" class="task-content">
+          <div class="task-card">
+            <h3>All students with an average grade higher than 3</h3>
+            <div class="task-body" id="t1d1"></div>
+          </div>
+          <div class="task-card">
+            <h3>All female student names with an average grade of 5</h3>
+            <div class="task-body" id="t1d2"></div>
+          </div>
+          <div class="task-card">
+            <h3>
+              All male student full names who live in Skopje and are over 18
+              years old
+            </h3>
+            <div class="task-body" id="t1d3"></div>
+          </div>
+          <div class="task-card">
+            <h3>
+              The average grades of all female students over the age of 24
+            </h3>
+            <div class="task-body" id="t1d4"></div>
+          </div>
+          <div class="task-card">
+            <h3>
+              All male students with a name starting with B and average grade
+              over 2
+            </h3>
+            <div class="task-body" id="t1d5"></div>
+          </div>
+          <div class="task-card">
+            <h3>
+              Student emails of all female students with age between 20 and 30
+              years, ordered ascending
+            </h3>
+            <div class="task-body" id="t1d6"></div>
+          </div>
+          <div class="task-card">
+            <h3>
+              Students full names of students above 40, ordered descending
+            </h3>
+            <div class="task-body" id="t1d7"></div>
+          </div>
+          <div class="task-card">
+            <h3>Count of students using google mail</h3>
+            <div class="task-body" id="t1d8"></div>
+          </div>
+          <div class="task-card">
+            <h3>The average age of female students living in Skopje</h3>
+            <div class="task-body" id="t1d9"></div>
+          </div>
+        </section>
+
+        <section id="task2" class="task-content">
+          <div class="task-card">
+            <h3>All laptops in stock ordered by price descending</h3>
+            <div class="task-body" id="t2d1"></div>
+          </div>
+          <div class="task-card">
+            <h3>The first grocery item</h3>
+            <div class="task-body" id="t2d2"></div>
+          </div>
+          <div class="task-card">
+            <h3>Index of the first "Samsung" smartphone</h3>
+            <div class="task-body" id="t2d3"></div>
+          </div>
+          <div class="task-card">
+            <h3>Check if there is any item from the brand "Sony"</h3>
+            <div class="task-body" id="t2d4"></div>
+          </div>
+          <div class="task-card">
+            <h3>The name of the highest rated skincare product</h3>
+            <div class="task-body" id="t2d5"></div>
+          </div>
+          <div class="task-card">
+            <h3>
+              The average discount percentage of products with a rating above
+              4.5
+            </h3>
+            <div class="task-body" id="t2d6"></div>
+          </div>
+          <div class="task-card">
+            <h3>Find the product with the highest price</h3>
+            <div class="task-body" id="t2d7"></div>
+          </div>
+          <div class="task-card">
+            <h3>Average price of all IPhone smartphones</h3>
+            <div class="task-body" id="t2d8"></div>
+          </div>
+          <div class="task-card">
+            <h3>The product with the lowest price</h3>
+            <div class="task-body" id="t2d9"></div>
+          </div>
+        </section>
+
+        <section id="task3" class="task-content">
+          <div class="task-card">
+            <h3>All Desserts</h3>
+            <div class="task-body" id="t3d1"></div>
+          </div>
+          <div class="task-card">
+            <h3>Get the names of recipes with more than 30 reviews</h3>
+            <div class="task-body" id="t3d2"></div>
+          </div>
+          <div class="task-card">
+            <h3>All recipes that use Cinnamon as an ingredient</h3>
+            <div class="task-body" id="t3d3"></div>
+          </div>
+          <div class="task-card">
+            <h3>Recipes that are served as both Lunch and Dinner</h3>
+            <div class="task-body" id="t3d4"></div>
+          </div>
+          <div class="task-card">
+            <h3>The ingredients needed for "Mango Salsa Chicken" dish</h3>
+            <div class="task-body" id="t3d5"></div>
+          </div>
+          <div class="task-card">
+            <h3>
+              Calculate the average number of calories for all American cusine
+              recipes
+            </h3>
+            <div class="task-body" id="t3d6"></div>
+          </div>
+          <div class="task-card">
+            <h3>The average cooking time of all pasta recipes</h3>
+            <div class="task-body" id="t3d7"></div>
+          </div>
+          <div class="task-card">
+            <h3>Find the recipe with the lowest number of reviews</h3>
+            <div class="task-body" id="t3d8"></div>
+          </div>
+        </section>
+
+        <section id="task4" class="task-content">
+          <div class="task-card">
+            <h3>All product titles in all carts</h3>
+            <div class="task-body" id="t4d1"></div>
+          </div>
+          <div class="task-card">
+            <h3>The total quantity of all products purchased</h3>
+            <div class="task-body" id="t4d2"></div>
+          </div>
+          <div class="task-card">
+            <h3>
+              Check if there is any cart with a total value above $100,000
+            </h3>
+            <div class="task-body" id="t4d3"></div>
+          </div>
+          <div class="task-card">
+            <h3>
+              The total revenue from all carts (sum of all discountedTotal
+              values)
+            </h3>
+            <div class="task-body" id="t4d4"></div>
+          </div>
+          <div class="task-card">
+            <h3>The cart with the highest total value</h3>
+            <div class="task-body" id="t4d5"></div>
+          </div>
+          <div class="task-card">
+            <h3>Find all products with a discount greater than 15%</h3>
+            <div class="task-body" id="t4d6"></div>
+          </div>
+          <div class="task-card">
+            <h3>The user ID of the cart with the highest total quantity</h3>
+            <div class="task-body" id="t4d7"></div>
+          </div>
+          <div class="task-card">
+            <h3>The most expensive product in all carts (before discount)</h3>
+            <div class="task-body" id="t4d8"></div>
+          </div>
+          <div class="task-card">
+            <h3>The average discounted total per cart</h3>
+            <div class="task-body" id="t4d9"></div>
+          </div>
+          <div class="task-card">
+            <h3>The top 3 most expensive products after discount</h3>
+            <div class="task-body" id="t4d10"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
