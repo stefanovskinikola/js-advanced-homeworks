@@ -1,0 +1,120 @@
+:root {
+  --gradient-primary: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  --gradient-secondary: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  --color-text-primary: #303030;
+  --color-text-secondary: #eaeaea;
+  --color-text-muted: #495057;
+  --color-border: #495057;
+  --color-accent: #f97316;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --spacing-xlarge: 4rem;
+
+  --border-radius-main: 10px;
+  --border-radius-small: 4px;
+
+  --transition-main: all 0.3s ease-in-out;
+  --shadow-nav: 0 2px 5px rgba(0, 0, 0, 0.05), 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode {
+  --gradient-primary: linear-gradient(135deg, #121212 0%, #1c1c1c 100%);
+  --gradient-secondary: linear-gradient(135deg, #1c1c1c 0%, #252525 100%);
+  --color-text-primary: #eaeaea;
+  --color-text-secondary: #303030;
+  --color-text-muted: #adb5bd;
+  --color-border: #adb5bd;
+
+  --shadow-nav: 0 2px 5px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-text-primary);
+}
+
+.container {
+  max-width: 1600px;
+  padding: 0 var(--spacing-medium);
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+.section-padding {
+  padding: var(--spacing-xlarge) 0;
+}
+
+.title {
+  font-size: clamp(1.5rem, 1.125rem + 1.875vw, 3rem);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+  padding-bottom: var(--spacing-large);
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  flex: 1;
+  height: 10px;
+  border-radius: var(--border-radius-main);
+  background-color: var(--color-accent);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.error-big {
+  color: var(--color-error);
+  text-align: center;
+  padding: var(--spacing-large) 0;
+  font-size: clamp(1.25rem, 1.0625rem + 0.9375vw, 2rem);
+  font-weight: bold;
+}
+
+@media (max-width: 1280px) {
+  .section-padding {
+    padding: var(--spacing-large) 0;
+  }
+
+  .title::after {
+    height: 6px;
+  }
+}

@@ -1,0 +1,257 @@
+.login-form,
+.register-form {
+  margin: var(--spacing-xl) 0;
+}
+
+.required-notice {
+  font-size: 0.875rem;
+  margin: 0 0 var(--spacing-md) var(--spacing-md);
+}
+
+.input-group,
+.btn-sign-in,
+.or {
+  margin-bottom: 2rem;
+}
+
+.input-group.error input,
+.input-group.error select {
+  border-color: var(--error);
+}
+
+.input-group.error label,
+.input-group.error svg,
+.input-group.error .required {
+  color: var(--error);
+}
+
+.input-group.error ul li {
+  list-style: none;
+  color: var(--error);
+  margin: var(--spacing-sm) 0 0 var(--spacing-sm);
+}
+
+.input-wrapper,
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper input,
+.select-wrapper select {
+  width: 100%;
+  padding: var(--spacing-input) var(--spacing-input) var(--spacing-input) 40px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+.input-wrapper label,
+.select-wrapper label {
+  position: absolute;
+  top: 50%;
+  left: 36px;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  pointer-events: none;
+  transition: var(--transition-default);
+  padding: 2px 4px;
+}
+
+.radio-wrapper label {
+  font-size: 1.2rem;
+}
+
+.input-wrapper input:focus + label,
+.input-wrapper input:not(:placeholder-shown) + label,
+.select-wrapper select:focus + label,
+.select-wrapper select:valid + label {
+  top: 0;
+  left: var(--spacing-input);
+  font-size: 0.875rem;
+  background-color: var(--background);
+}
+
+.input-wrapper input:hover,
+.input-wrapper input:focus,
+.select-wrapper select:hover,
+.select-wrapper select:focus {
+  border-color: var(--primary);
+}
+
+.input-icon,
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  transition: var(--transition-default);
+}
+
+.input-icon {
+  left: var(--spacing-input);
+  pointer-events: none;
+}
+
+.input-icon,
+.password-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.password-toggle {
+  right: var(--spacing-input);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.password-toggle:hover {
+  color: var(--text-primary);
+}
+
+.select-wrapper select:invalid {
+  color: var(--text-secondary);
+}
+
+.select-wrapper:has(select:invalid) {
+  color: var(--text-secondary);
+}
+
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: var(--spacing-input);
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  pointer-events: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid var(--border);
+  margin-right: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+input[type="checkbox"]:checked::after,
+input[type="radio"]:checked::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="radio"]:checked:after {
+  background-color: var(--primary);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  width: var(--spacing-input);
+  height: var(--spacing-input);
+  border-radius: 50%;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  color: var(--text-primary);
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="checkbox"] {
+  border-radius: var(--radius-sm);
+}
+
+input[type="checkbox"]:hover,
+input[type="radio"]:hover,
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  border-color: var(--primary);
+}
+
+.radio-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.checkbox-group > span {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group a {
+  margin-left: auto;
+}
+
+.success-message {
+  color: var(--success);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .input-wrapper label,
+  .select-wrapper label,
+  .radio-wrapper label {
+    font-size: 1rem;
+  }
+}

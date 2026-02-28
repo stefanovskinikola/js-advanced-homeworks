@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-background: #f7f7fb;
+  --color-primary: #ff6b4a;
+  --color-secondary: #ffe1d8;
+  --color-dark-text: #1f1f2b;
+  --color-white-text: #f7f7fb;
+  --color-muted-text: #6c6c80;
+  --color-footer-background: #1b1b25;
+  --color-footer-text: #f3f3ff;
+  --color-primary-rgb: 255, 107, 74;
+  --color-secondary-rgb: 255, 225, 216;
+  --color-white-text-rgb: 247, 247, 251;
+  --color-muted-text-rgb: 108, 108, 128;
+  --radius-l: 26px;
+  --radius-m: 18px;
+  --shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-strong: 4px 4px 16px rgba(0, 0, 0, 0.75);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-dark-text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  overflow-x: clip;
+}
+
+.hero-label,
+.products-label,
+.hero-image::after,
+.hero-image::before {
+  font-weight: 700;
+  background-color: var(--color-primary);
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-l);
+  color: var(--color-white-text);
+}
+
+.cta-btn {
+  background-color: var(--color-primary);
+  color: var(--color-white-text);
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-l);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.cta-btn:hover {
+  color: var(--color-dark-text);
+  border: 2px solid var(--color-dark-text);
+}
+
+.cta-btn-icon {
+  overflow: clip;
+}
+
+.hero-label,
+.products-label {
+  text-transform: uppercase;
+}
+
+.dot-separator {
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 4px;
+  background-color: var(--color-primary);
+}
+
+.benefits-card,
+.products-card,
+.testimonial-content {
+  box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+}
+
+.benefits-card:hover,
+.products-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-strong);
+  -webkit-box-shadow: var(--shadow-strong);
+  -moz-box-shadow: var(--shadow-strong);
+}
+
+@media (max-width: 499px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+}

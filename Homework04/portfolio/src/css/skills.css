@@ -1,0 +1,88 @@
+.skills-section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: var(--spacing-medium);
+}
+
+.skills-section section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.skills-section section h2 {
+  font-size: clamp(1.25rem, 1.0625rem + 0.9375vw, 2rem);
+  font-weight: 700;
+  margin-bottom: var(--spacing-small);
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+  font-weight: 700;
+  font-size: clamp(1rem, 0.875rem + 0.625vw, 1.5rem);
+  background: var(--color-text-primary);
+  color: var(--color-text-secondary);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius-main);
+  position: relative;
+  overflow: clip;
+  --bar-width: 0;
+}
+
+.skill::after {
+  content: "";
+  position: absolute;
+  width: var(--bar-width);
+  height: 10px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--color-accent);
+  transition: var(--transition-main);
+  border-top-right-radius: var(--border-radius-main);
+  border-bottom-right-radius: var(--border-radius-main);
+}
+
+.skill:not(:last-child) {
+  margin-bottom: var(--spacing-medium);
+}
+
+@media (max-width: 992px) {
+  .skill {
+    gap: var(--spacing-medium);
+    padding: var(--spacing-small);
+  }
+
+  .skill::after {
+    height: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    flex-direction: column;
+    gap: var(--spacing-large);
+  }
+
+  .skills-section .tech-stack {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--spacing-medium);
+  }
+
+  .tech-stack h2 {
+    grid-column: 1 / -1;
+  }
+
+  .skills-section .tech-stack .skill {
+    margin-bottom: var(--spacing-medium);
+  }
+}
+
+@media (max-width: 425px) {
+  .skills-section .tech-stack {
+    grid-template-columns: 1fr;
+  }
+}

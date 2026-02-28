@@ -1,0 +1,149 @@
+@keyframes bounce-in-top {
+  0% {
+    transform: translate(-50%, -150%);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(-50%, 20%);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -20%);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes bounce-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(5%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(-5%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes arrow-moving {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(200%);
+  }
+
+  51% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+header {
+  animation: bounce-in-top 1s ease-out forwards;
+}
+
+.hero-details {
+  animation: bounce-in-left 1s ease-out forwards;
+}
+
+.hero-cta {
+  animation: bounce-in-right 1s ease-out forwards;
+}
+
+.fade-in-up {
+  animation: fade-in-up 1s both;
+  animation-timeline: view();
+  animation-range: entry 15% cover 30%;
+}
+
+.btn-secondary:hover .fa-arrow-right {
+  animation: arrow-moving 0.5s linear;
+}
+
+.typing-cursor::after {
+  content: "|";
+  font-weight: bold;
+  animation: blink 1s step-end infinite;
+}
+
+.pop:hover {
+  animation: pop 0.5s ease;
+}
+
+@media (max-width: 992px) {
+  .fade-in-up {
+    animation-range: entry 5% cover 10%;
+  }
+}

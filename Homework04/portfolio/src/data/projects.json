@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "The Pizza Lab",
+    "description": "Custom form design for a fictional pizza restaurant's online ordering system.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "image": "./src/img/projects/project1.webp",
+    "live": "./projects/project1/index.html",
+    "github": "https://github.com/stefanovskinikola/js-advanced-homeworks/tree/main/Homework04/portfolio/projects/project1"
+  },
+  {
+    "id": 2,
+    "title": "LumoBite",
+    "description": "Landing page for a fictional healthy snacks brand.",
+    "tech": ["HTML", "CSS"],
+    "image": "./src/img/projects/project2.webp",
+    "live": "./projects/project2/index.html",
+    "github": "https://github.com/stefanovskinikola/js-advanced-homeworks/tree/main/Homework04/portfolio/projects/project2"
+  },
+  {
+    "id": 3,
+    "title": "Galactic Ledger",
+    "description": "Browser-based banking terminal simulation for interstellar accounts.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "image": "./src/img/projects/project3.webp",
+    "live": "./projects/project3/index.html",
+    "github": "https://github.com/stefanovskinikola/js-advanced-homeworks/tree/main/Homework04/portfolio/projects/project3"
+  },
+  {
+    "id": 4,
+    "title": "NexaNext",
+    "description": "Front-end social network prototype.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "image": "./src/img/projects/project4.webp",
+    "live": "./projects/project4/index.html",
+    "github": "https://github.com/stefanovskinikola/js-advanced-homeworks/tree/main/Homework04/portfolio/projects/project4"
+  }
+]

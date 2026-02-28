@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("src/css/shared.css");
+@import url("src/css/buttons.css");
+@import url("src/css/animations.css");
+@import url("src/css/header.css");
+@import url("src/css/hero.css");
+@import url("src/css/about.css");
+@import url("src/css/skills.css");
+@import url("src/css/projects.css");
+@import url("src/css/contact.css");
+@import url("src/css/footer.css");
+@import url("src/css/modals.css");

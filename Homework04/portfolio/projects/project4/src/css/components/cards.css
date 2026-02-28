@@ -1,0 +1,175 @@
+.user-card,
+.profile-section,
+.about-section,
+.friends-section,
+.images-section,
+.post {
+  background-color: var(--card-background);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  transition: var(--transition-default);
+}
+
+.user-card {
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  cursor: pointer;
+}
+
+.user-card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary);
+}
+
+.user-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  transition: var(--transition-default);
+}
+
+.profile-section,
+.about-section,
+.friends-section {
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.post {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.profile-section {
+  margin: var(--spacing-xl) 0;
+}
+
+.about-section,
+.post:not(:last-child) {
+  margin-bottom: var(--spacing-lg);
+}
+
+.profile-section:hover,
+.about-section:hover,
+.friends-section:hover,
+.images-section:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.friends-section {
+  white-space: nowrap;
+}
+
+.images-section {
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.friend-card {
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-default);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  flex: 1 0 auto;
+}
+
+.friend-card:hover {
+  border-color: var(--primary);
+}
+
+.friend-details p {
+  color: var(--accent);
+}
+
+.friends-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.friend-img img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+}
+
+.form-container {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: var(--spacing-xl) auto;
+  padding: var(--spacing-xl);
+  background-color: var(--card-background);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+
+.form-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
+.form-container > p {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .profile-section {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-md);
+  }
+
+  .about-section,
+  .friends-section,
+  .images-section {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .form-container {
+    margin: var(--spacing-lg) auto;
+    padding: var(--spacing-lg);
+  }
+
+  .form-container h2 {
+    font-size: 2rem;
+  }
+
+  .friend-card {
+    flex-basis: calc(50% - var(--spacing-md) / 2);
+  }
+
+  .about-details,
+  .friends-cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

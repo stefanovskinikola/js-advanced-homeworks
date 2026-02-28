@@ -1,0 +1,70 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-main);
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--border-radius-main);
+  transition: var(--transition-main);
+  cursor: zoom-in;
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--spacing-medium);
+  right: var(--spacing-medium);
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: var(--transition-main);
+  z-index: 30;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.modal-close:hover {
+  color: var(--color-accent);
+}
+
+.modal-img.zoomed {
+  transform: scale(2.5);
+  cursor: zoom-out;
+}
+
+.confirm-box {
+  background: var(--color-text-primary);
+  color: var(--color-text-secondary);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius-main);
+  text-align: center;
+}
+
+.confirm-box h3 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-small);
+}
+
+.confirm-box p {
+  margin-bottom: var(--spacing-large);
+}
+
+.confirm-box .reset-btns {
+  display: flex;
+  gap: var(--spacing-medium);
+  justify-content: center;
+}

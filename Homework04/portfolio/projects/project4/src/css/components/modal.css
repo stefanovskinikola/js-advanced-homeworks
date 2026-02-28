@@ -1,0 +1,72 @@
+.image-modal-overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  z-index: 20;
+  background-color: var(--overlay);
+  transition: var(--transition-default);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.image-modal-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-image-container {
+  background-color: var(--card-background);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+
+.modal-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: var(--radius-sm);
+  cursor: zoom-in;
+  transition: var(--transition-default);
+}
+
+.modal-image:active {
+  transform: scale(1.2);
+}
+
+.image-modal-overlay button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.image-modal-overlay button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.btn-prev {
+  left: var(--spacing-lg);
+}
+
+.btn-next {
+  right: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .modal-image {
+    max-width: 80vw;
+    max-height: 80vh;
+  }
+
+  .image-modal-overlay button {
+    top: auto;
+    bottom: var(--spacing-lg);
+    transform: none;
+  }
+
+  .image-modal-overlay button:active {
+    transform: scale(0.95);
+  }
+}

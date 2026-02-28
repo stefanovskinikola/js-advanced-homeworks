@@ -1,0 +1,76 @@
+.or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.or::before,
+.or::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: var(--border);
+}
+
+.action-with-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.action-with-container > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  max-width: 60px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-default);
+  padding: var(--spacing-sm);
+}
+
+.action-with-container > a:hover {
+  border-color: var(--primary);
+}
+
+.form-footer {
+  text-align: center;
+}
+
+.form-footer a {
+  font-weight: 700;
+  transition: var(--transition-default);
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+  color: var(--text-primary);
+}
+
+.forgot-password {
+  color: var(--text-secondary);
+  transition: var(--transition-default);
+  font-weight: 700;
+}
+
+.forgot-password:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.terms a {
+  font-weight: 700;
+  transition: var(--transition-default);
+}
+
+.terms a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}

@@ -1,0 +1,164 @@
+.hero {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-primary-rgb), 0.1) 0%,
+    rgba(var(--color-secondary-rgb), 0.1) 50%,
+    rgba(var(--color-primary-rgb), 0.1) 100%
+  );
+}
+
+.hero-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3rem;
+  gap: 3rem;
+}
+
+.hero-wrapper > * {
+  flex: 1 1 0%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.hero-image {
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--radius-m);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image:hover img {
+  transform: scale(1.05);
+}
+
+.hero-image::after,
+.hero-image::before {
+  position: absolute;
+}
+
+.hero-image::after {
+  content: "Bestseller";
+  top: 10px;
+  right: 10px;
+}
+
+.hero-image::before {
+  content: "50g Protein";
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.secondary-btn {
+  background-color: var(--color-white-text);
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-white-text);
+  border-radius: var(--radius-l);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.secondary-btn:hover {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.hero-labels {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 0.6222rem + 2.7778vw, 3.5rem);
+  line-height: 1.2;
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-primary-rgb), 1) 0%,
+    rgba(var(--color-secondary-rgb), 1) 100%
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.hero-content p {
+  font-size: 1.125rem;
+  color: var(--color-muted-text);
+  line-height: 1.5;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rating span {
+  font-weight: 700;
+  color: var(--color-muted-text);
+}
+
+.stars .fa-star,
+.stars .fa-star-half {
+  color: var(--color-primary);
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 20px 0;
+  }
+
+  .hero-wrapper {
+    flex-direction: column;
+    margin: 3rem 0;
+    height: auto;
+  }
+
+  .hero-image {
+    order: -1;
+    margin-bottom: 20px;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 499px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-height: 200px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btns > a {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --font-main: "Inter", system-ui, sans-serif;
+  --spacing-sm: 0.5rem;
+  --spacing-input: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 3rem;
+  --radius-sm: 0.5rem;
+  --transition-default: all 0.3s ease;
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --accent: #7c3aed;
+  --background: #f8fafc;
+  --card-background: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border: #e2e8f0;
+  --error: #dc2626;
+  --success: #16a34a;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --overlay: rgba(0, 0, 0, 0.7);
+  --skeleton-base: #e2e8f0;
+  --skeleton-shine: #f8fafc;
+}
+
+body.dark-mode {
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --accent: #8b5cf6;
+  --background: #0f172a;
+  --card-background: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border: #334155;
+  --error: #ef4444;
+  --success: #22c55e;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --overlay: rgba(0, 0, 0, 0.85);
+  --skeleton-base: #334155;
+  --skeleton-shine: #475569;
+}

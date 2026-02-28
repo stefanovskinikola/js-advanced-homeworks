@@ -1,0 +1,24 @@
+.footer-inner {
+  padding: var(--spacing-medium) 0;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-large);
+}
+
+.footer-inner a {
+  color: var(--color-text-muted);
+  font-size: 2rem;
+  transition: var(--transition-main);
+  border: 2px solid var(--color-text-muted);
+  border-radius: var(--border-radius-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-inner a:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}

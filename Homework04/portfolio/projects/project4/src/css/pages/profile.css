@@ -1,0 +1,142 @@
+.posts-section {
+  flex-basis: 70%;
+}
+
+.details-section {
+  flex-basis: 30%;
+}
+
+.profile-image-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--border);
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.profile-image-wrapper:hover {
+  border-color: var(--primary);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.profile-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.profile-btns-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.profile-website:hover {
+  border-color: var(--primary);
+}
+
+.about-details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.about-details li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.post-user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.post-user img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+}
+
+.post-image img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.post-image img:hover {
+  border-color: var(--primary);
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: var(--transition-default);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.post-actions button svg {
+  height: 20px;
+  width: 20px;
+  margin-right: var(--spacing-sm);
+  vertical-align: middle;
+}
+
+.post-actions button:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .profile-name {
+    font-size: 2rem;
+  }
+
+  .profile-details-wrapper {
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .profile-btns-wrapper {
+    justify-content: center;
+  }
+
+  .details-section,
+  .posts-section {
+    flex-basis: auto;
+    width: 100%;
+  }
+}

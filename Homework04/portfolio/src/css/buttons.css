@@ -1,0 +1,147 @@
+.btn-social,
+.btn-main,
+.btn-secondary,
+.btn-tertiary,
+.btn-submit,
+.btn-reset {
+  position: relative;
+  border-radius: var(--border-radius-main);
+  transition: var(--transition-main);
+  background-color: var(--color-text-primary);
+  color: var(--color-text-secondary);
+  overflow: clip;
+  font-weight: bold;
+}
+
+.btn-social::after,
+.btn-main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-accent);
+  transition: var(--transition-main);
+}
+
+.btn-social {
+  padding: var(--spacing-small);
+  font-size: clamp(1.25rem, 1.0625rem + 0.9375vw, 2rem);
+}
+
+.btn-main,
+.btn-secondary {
+  padding: var(--spacing-small) var(--spacing-large);
+  font-size: clamp(1.25rem, 1.0625rem + 0.9375vw, 2rem);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-text-primary);
+  color: var(--color-text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+.btn-tertiary {
+  font-size: clamp(0.875rem, 0.78125rem + 0.46875vw, 1.25rem);
+  border: 2px solid var(--color-text-secondary);
+  color: var(--color-text-secondary);
+  padding: var(--spacing-small) var(--spacing-large);
+}
+
+.btn-submit,
+.btn-reset {
+  font-size: clamp(0.875rem, 0.78125rem + 0.46875vw, 1.25rem);
+  border: 2px solid var(--color-text-primary);
+  color: var(--color-text-secondary);
+  padding: var(--spacing-medium) var(--spacing-large);
+  margin-top: var(--spacing-medium);
+}
+
+.btn-submit,
+.btn-reset {
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-secondary div {
+  overflow: clip;
+}
+
+.btn-social i,
+.btn-main span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-main i {
+  margin-left: var(--spacing-medium);
+}
+
+.btn-social::after {
+  width: 0%;
+  height: 100%;
+}
+
+.btn-main::after {
+  width: 100%;
+  height: 0%;
+}
+
+.btn-social:not(:disabled):hover::after {
+  width: 100%;
+}
+
+.btn-main:not(:disabled):hover::after {
+  height: 100%;
+}
+
+.btn-secondary:hover,
+.btn-tertiary:hover,
+.btn-submit:not(:disabled):hover,
+.btn-reset:not(:disabled):hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn-tertiary:hover {
+  transform: scale(1.1);
+}
+
+.filter-btn {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  border-color: var(--color-accent);
+}
+
+.confirm-box .reset-btns button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 992px) {
+  .filter-btn {
+    font-size: 0.75rem;
+    padding: var(--spacing-small) var(--spacing-medium);
+  }
+}
+
+@media (max-width: 425px) {
+  .btn-submit,
+  .btn-reset {
+    padding: var(--spacing-medium);
+  }
+
+  .btn-tertiary {
+    padding: var(--spacing-small) var(--spacing-medium);
+  }
+}

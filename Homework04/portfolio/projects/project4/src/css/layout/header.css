@@ -1,0 +1,54 @@
+header {
+  background-color: var(--card-background);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container,
+.btns-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  color: var(--primary);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo svg {
+  height: 35px;
+  width: 35px;
+}
+
+.logo-container h1 {
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  header {
+    position: static;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+}

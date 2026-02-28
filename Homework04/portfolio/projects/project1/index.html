@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>The Pizza Lab – Order Online</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header>
+        <h1>The Pizza Lab – Order Online</h1>
+        <p>Use the form below to place your order.</p>
+      </header>
+      <!-- MAIN -->
+      <main>
+        <form action="#" method="post" id="order-form">
+          <div class="notes">
+            <p class="note">
+              All fields marked with <span class="required">*</span> are
+              required.
+            </p>
+            <p class="note">We currently deliver only within Skopje.</p>
+          </div>
+          <!-- FIRST FIELDSET -->
+          <fieldset>
+            <legend>Contact Information</legend>
+            <div class="form-grid">
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="fullname">Full Name: <span class="required">*</span></label>
+                <input
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  placeholder="John Doe"
+                  required
+                />
+              </div>
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="email">Email: <span class="required">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="email@example.com"
+                  required
+                />
+              </div>
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="phone">Phone Number: <span class="required">*</span></label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(123) 456-7890"
+                  required
+                />
+              </div>
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="order-type">Order Type: <span class="required">*</span></label>
+                <select name="order-type" id="order-type" required>
+                  <option value="" disabled selected hidden>
+                    Please select
+                  </option>
+                  <option value="delivery">Delivery</option>
+                  <option value="pickup">Pickup</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+          <!-- SECOND FIELDSET -->
+          <fieldset>
+            <legend>Delivery Information</legend>
+            <div class="form-grid">
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="address">Delivery Address: <span class="required"></span></label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="123 Main St, Skopje"
+                />
+              </div>
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="apartment">Apartment Number: <span class="required"></span></label>
+                <input
+                  type="text"
+                  id="apartment"
+                  name="apartment"
+                  placeholder="Apartment number"
+                />
+              </div>
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="delivery-date">Delivery Date: <span class="required"></span></label>
+                <input type="date" id="delivery-date" name="delivery-date" />
+              </div>
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="delivery-time">Delivery Time: <span class="required"></span></label>
+                <input type="time" id="delivery-time" name="delivery-time" />
+              </div>
+            </div>
+            <div class="delivery-notes">
+              <p id="delivery-note"></p>
+            </div>
+          </fieldset>
+          <!-- THIRD FIELDSET -->
+          <fieldset>
+            <legend>Order Details</legend>
+            <div class="form-grid">
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="pizza_type">Pizza Type: <span class="required">*</span></label>
+                <select id="pizza_type" name="pizza_type" required>
+                  <option value="" disabled selected hidden>
+                    Please select
+                  </option>
+                  <option value="margherita">Margherita</option>
+                  <option value="pepperoni">Pepperoni</option>
+                  <option value="capricciosa">Capricciosa</option>
+                  <option value="vegetarian">Vegetarian</option>
+                  <option value="four_cheese">Four Cheese</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="pizza_size">Pizza Size: <span class="required">*</span></label>
+                <select id="pizza_size" name="pizza_size" required>
+                  <option value="" disabled selected hidden>
+                    Please select
+                  </option>
+                  <option value="small">Small (26cm)</option>
+                  <option value="medium">Medium (32cm)</option>
+                  <option value="large">Large (40cm)</option>
+                  <option value="family">Family (50cm)</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <div class="checkbox-group">
+                  <span>Toppings:</span>
+                  <div class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="topping-mushrooms"
+                      name="toppings"
+                      value="mushrooms"
+                    />
+                    <label for="topping-mushrooms">Mushrooms</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="topping-onions"
+                      name="toppings"
+                      value="onions"
+                    />
+                    <label for="topping-onions">Onions</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="topping-olives"
+                      name="toppings"
+                      value="olives"
+                    />
+                    <label for="topping-olives">Olives</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="topping-bell-peppers"
+                      name="toppings"
+                      value="bell_peppers"
+                    />
+                    <label for="topping-bell-peppers">Bell Peppers</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="topping-bacon"
+                      name="toppings"
+                      value="bacon"
+                    />
+                    <label for="topping-bacon">Bacon</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-item">
+                <div class="checkbox-group">
+                  <span>Extras:</span>
+                  <div class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="extra-cheese"
+                      name="extras"
+                      value="extra_cheese"
+                    />
+                    <label for="extra-cheese">Extra Cheese</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="garlic-sauce"
+                      name="extras"
+                      value="garlic_sauce"
+                    />
+                    <label for="garlic-sauce">Garlic Sauce</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="chili-flakes"
+                      name="extras"
+                      value="chili_flakes"
+                    />
+                    <label for="chili-flakes">Chili Flakes</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="oregano"
+                      name="extras"
+                      value="oregano"
+                    />
+                    <label for="oregano">Oregano</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="bbq-drizzle"
+                      name="extras"
+                      value="bbq_drizzle"
+                    />
+                    <label for="bbq-drizzle">BBQ Drizzle</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="spice_level">Spice Level: <span class="required">*</span></label>
+                <select id="spice_level" name="spice_level" required>
+                  <option value="" disabled selected hidden>
+                    Please select
+                  </option>
+                  <option value="no_spice">No Spice</option>
+                  <option value="mild">Mild</option>
+                  <option value="medium">Medium</option>
+                  <option value="hot">Hot</option>
+                  <option value="extra_hot">Extra Hot</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="quantity">Quantity: <span class="required">*</span></label>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  min="1"
+                  value="1"
+                  step="1"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+          <!-- FOURTH FIELDSET -->
+          <fieldset>
+            <legend>Additional Notes</legend>
+            <div class="form-grid">
+              <div class="form-item">
+                <label for="notes">Note:</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  placeholder="gate code, drop-off instructions, allergies..."
+                ></textarea>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label>Contactless Drop-off: <span class="required">*</span></label>
+                <div class="radio-group">
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="contactless_yes"
+                      name="contactless"
+                      value="yes"
+                      required
+                    />
+                    <label for="contactless_yes">Yes</label>
+                  </div>
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="contactless_no"
+                      name="contactless"
+                      value="no"
+                    />
+                    <label for="contactless_no">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-item">
+                <label for="coupon">Coupon Code:</label>
+                <input
+                  type="text"
+                  id="coupon"
+                  name="coupon"
+                  placeholder="Enter coupon code"
+                />
+              </div>
+            </div>
+          </fieldset>
+          <!-- FIFTH FIELDSET -->
+          <fieldset>
+            <legend>Payment & Confirmation</legend>
+            <div class="form-grid">
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="payment_method">Payment Method: <span class="required">*</span></label>
+                <select id="payment_method" name="payment_method" required>
+                  <option value="" disabled selected hidden>
+                    Please select
+                  </option>
+                  <option value="cash">Cash</option>
+                  <option value="card">Credit/Debit Card</option>
+                  <option value="mobile">Mobile Payment</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <!-- prettier-ignore -->
+                <label for="receipt">Receipt Preference: <span class="required">*</span></label>
+                <select id="receipt" name="receipt" required>
+                  <option value="" disabled selected hidden>
+                    Please select
+                  </option>
+                  <option value="email">Email Receipt</option>
+                  <option value="paper">Paper Receipt</option>
+                  <option value="none">No Receipt</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="tip">Tip: <span class="required">*</span></label>
+                <select id="tip" name="tip" required>
+                  <option value="" disabled selected hidden>
+                    Please select
+                  </option>
+                  <option value="0">No Tip</option>
+                  <option value="5%">5%</option>
+                  <option value="10%">10%</option>
+                  <option value="15%">15%</option>
+                  <option value="custom">Custom Amount</option>
+                </select>
+              </div>
+              <div class="form-item hidden" id="custom-tip-container">
+                <label for="custom-tip"
+                  >Custom Tip Amount: <span class="required">*</span></label
+                >
+                <input
+                  type="number"
+                  id="custom-tip"
+                  name="custom-tip"
+                  min="1"
+                  placeholder="Enter amount"
+                />
+              </div>
+            </div>
+          </fieldset>
+          <!-- TERMS AND UPDATES -->
+          <div class="form-grid">
+            <div class="form-item">
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="agree_policy"
+                  name="agree_policy"
+                  required
+                />
+                <label for="agree_policy" class="flex-font">
+                  I agree to the Terms & Privacy Policy
+                  <span class="required">*</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-item">
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="email_updates"
+                  name="email_updates"
+                />
+                <label for="email_updates" class="flex-font">
+                  I want to receive email updates and promotions.
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- BUTTONS -->
+          <div class="form-grid">
+            <div class="form-item">
+              <button type="submit" class="submit-btn">Place Order</button>
+            </div>
+            <div class="form-item">
+              <button type="reset" class="reset-btn">Reset</button>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <!-- RESET MODAL -->
+    <div id="reset-modal" class="modal">
+      <div class="modal-content">
+        <h2>Reset Form?</h2>
+        <p>Are you sure you want to clear all fields?</p>
+        <div class="modal-buttons">
+          <button id="confirm-reset" class="modal-btn">Yes, Please</button>
+          <button id="cancel-reset" class="modal-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

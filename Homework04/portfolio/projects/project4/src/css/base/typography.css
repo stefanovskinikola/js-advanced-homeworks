@@ -1,0 +1,45 @@
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+p {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.small-text {
+  font-weight: 300;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.message {
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.loading-message svg {
+  height: 20px;
+  width: 20px;
+}
+
+.error {
+  color: var(--error);
+}
+
+.required {
+  color: var(--primary);
+}

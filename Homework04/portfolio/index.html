@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <!-- prettier-ignore -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="/src/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/src/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/src/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/src/img/favicon/site.webmanifest" />
+
+    <meta name="apple-mobile-web-app-title" content="Nikola Stefanovski" />
+    <meta property="og:title" content="Nikola Stefanovski">
+    <meta name="description" content="Personal Portfolio">
+    <meta property="og:description" content="Personal Portfolio">
+    <meta property="og:image" content="/src/img/og.webp">
+
+    <link rel="stylesheet" href="main.css" />
+    <title>Portfolio - Nikola Stefanovski</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <a href="#hero">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#about">
+                <i class="fa-solid fa-address-card"></i>
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="#skills">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>Skills</span>
+              </a>
+            </li>
+            <li>
+              <a href="#projects">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+          <button id="theme-toggle" class="btn-theme"></button>
+        </nav>
+      </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main>
+      <div class="bg-gradient-primary">
+        <div class="container">
+          <!-- HERO SECTION -->
+          <section id="hero" class="hero">
+            <section class="hero-details">
+              <h2>Hello, I'm</h2>
+              <h1 class="hero-name"></h1>
+              <h2 class="hero-title"></h2>
+              <p class="hero-description"></p>
+            </section>
+            <section class="hero-cta">
+              <div class="hero-social">
+                <a target="_blank" class="btn-social linkedin">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a target="_blank" class="btn-social github">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a target="_blank" class="btn-social gitlab">
+                  <i class="fa-brands fa-square-gitlab"></i>
+                </a>
+              </div>
+              <div class="hero-btns">
+                <a href="#contact" class="get-in-touch btn-main">
+                  <span>
+                    Get in Touch<i class="fa-solid fa-arrow-down"></i>
+                  </span>
+                </a>
+                <a
+                  href="cv/Nikola_Stefanovski_CV.pdf"
+                  download
+                  class="btn-main"
+                >
+                  <span>Download CV<i class="fa-solid fa-download"></i></span>
+                </a>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+      <div class="bg-gradient-secondary">
+        <div class="container">
+          <!-- ABOUT SECTION -->
+          <section id="about" class="about-section section-padding fade-in-up">
+            <h2 class="title">
+              <i class="fa-solid fa-address-card"></i>About Me
+            </h2>
+            <p class="about-description"></p>
+            <a target="_blank" class="find-out-more btn-secondary">
+              Find Out More
+              <div><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+          </section>
+        </div>
+      </div>
+      <div class="bg-gradient-primary">
+        <div class="container">
+          <!-- SKILLS SECTION -->
+          <section id="skills" class="section-padding fade-in-up">
+            <h2 class="title">
+              <i class="fa-solid fa-laptop-code"></i>My Skills
+            </h2>
+            <section class="skills-section">
+              <section class="tech-stack">
+                <h2>Tech Stack</h2>
+              </section>
+              <section class="tech-skills">
+                <h2>Professional Skills</h2>
+              </section>
+            </section>
+          </section>
+        </div>
+      </div>
+      <div class="bg-gradient-secondary">
+        <div class="container">
+          <!-- PROJECTS SECTION -->
+          <section id="projects" class="section-padding fade-in-up">
+            <h2 class="title"><i class="fa-solid fa-briefcase"></i>My Works</h2>
+            <div id="project-filters" class="project-filters"></div>
+            <section class="projects-section"></section>
+            <a target="_blank" class="check-out-more btn-secondary">
+              Check Out More
+              <div><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+          </section>
+        </div>
+      </div>
+      <div class="bg-gradient-primary">
+        <div class="container">
+          <!-- CONTACT SECTION -->
+          <section id="contact" class="section-padding fade-in-up">
+            <h2 class="title">
+              <i class="fa-solid fa-envelope"></i>Get In Touch
+            </h2>
+            <div class="form-container">
+              <span class="note">
+                Fields marked with <span class="required">*</span> are required
+              </span>
+              <form>
+                <div class="form-input-row">
+                  <div class="input-group">
+                    <div class="input-wrapper">
+                      <input
+                        type="text"
+                        id="first-name"
+                        name="first-name"
+                        placeholder=" "
+                      />
+                      <label for="first-name">
+                        First Name <span class="required">*</span>
+                      </label>
+                    </div>
+                    <ul id="firstNameError" class="errorField"></ul>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-wrapper">
+                      <input
+                        type="text"
+                        id="last-name"
+                        name="last-name"
+                        placeholder=" "
+                      />
+                      <label for="last-name">Last Name</label>
+                    </div>
+                    <ul id="lastNameError" class="errorField"></ul>
+                  </div>
+                </div>
+                <div class="form-input-row">
+                  <div class="input-group">
+                    <div class="input-wrapper">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder=" "
+                      />
+                      <label for="email">
+                        Email
+                        <span class="required">*</span>
+                      </label>
+                    </div>
+                    <ul id="emailError" class="errorField"></ul>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-wrapper">
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder=" "
+                      />
+                      <label for="phone">Phone</label>
+                    </div>
+                    <ul id="phoneError" class="errorField"></ul>
+                  </div>
+                </div>
+                <div class="form-input-row">
+                  <div class="input-group">
+                    <div class="input-wrapper">
+                      <textarea
+                        id="message"
+                        name="message"
+                        placeholder=" "
+                        maxlength="2000"
+                      ></textarea>
+                      <label for="message">
+                        Message <span class="required">*</span>
+                      </label>
+                      <div class="char-counter">
+                        <span class="char-current">0</span> / 2000
+                      </div>
+                    </div>
+                    <ul id="messageError" class="errorField"></ul>
+                  </div>
+                </div>
+                <div class="form-btns">
+                  <button type="submit" class="btn-submit">Send Message</button>
+                  <button type="reset" class="btn-reset">Reset</button>
+                </div>
+                <div class="form-message"></div>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-gradient-secondary">
+      <div class="container">
+        <div class="footer-inner">
+          <span>
+            Copyright &copy; <span id="current-year"></span> Nikola Stefanovski
+            &mdash; Built as a Homework Assignment for the Web Development
+            Academy
+          </span>
+          <a href="#hero"><i class="fa-solid fa-caret-up"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="image-modal" class="modal">
+      <span class="modal-close">
+        <i class="fa-regular fa-rectangle-xmark"></i>
+      </span>
+      <img class="modal-img" />
+    </div>
+
+    <div id="reset-modal" class="modal">
+      <div class="confirm-box">
+        <h3>Are you sure?</h3>
+        <p>This will clear all the information you've entered.</p>
+        <div class="reset-btns">
+          <button id="confirm-reset-btn" class="btn-tertiary">
+            Yes, Clear It
+          </button>
+          <button id="cancel-reset-btn" class="btn-tertiary">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d3334bd7a7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
