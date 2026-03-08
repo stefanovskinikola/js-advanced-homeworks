@@ -1,0 +1,7 @@
+.back-to-top {
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+}
