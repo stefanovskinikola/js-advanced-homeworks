@@ -104,7 +104,7 @@ The codebase follows a **modular MVC-like** pattern. Every layer has a single re
 │       ├── footer.css
 │       └── back-to-top.css
 ├── js/
-│   ├── main.js                 # App entry point (thin bootstrap)
+│   ├── main.js                 # App entry point
 │   ├── config.js               # API URLs, EmailJS keys, constants
 │   ├── state.js                # Shared mutable application state
 │   ├── models/
