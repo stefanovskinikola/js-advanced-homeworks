@@ -1,0 +1,45 @@
+#mainNav {
+  backdrop-filter: blur(10px);
+  background-color: rgba(15, 17, 23, 0.95) !important;
+}
+
+#mainNav .nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#mainNav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: -1px;
+  height: 2px;
+  background: var(--bs-primary);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+#mainNav .nav-link.active {
+  color: var(--bs-primary) !important;
+}
+
+#mainNav .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.cart-badge {
+  font-size: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #mainNav .nav-link:hover {
+    color: var(--bs-primary) !important;
+  }
+
+  #mainNav .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+}

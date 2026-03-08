@@ -1,0 +1,34 @@
+.product-detail-img {
+  max-height: 400px;
+}
+
+.product-detail-gallery img {
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.product-detail-gallery img:hover,
+.product-detail-gallery img.active {
+  border-color: var(--bs-primary);
+}
+
+.qty-control {
+  flex-wrap: nowrap;
+}
+
+.qty-control .btn {
+  min-width: 36px;
+}
+
+.qty-control .qty-value {
+  min-width: 40px;
+}
+
+.qty-control.qty-control-sm .btn {
+  min-width: 32px;
+}
+
+.qty-control.qty-control-sm .qty-value {
+  min-width: 32px;
+}

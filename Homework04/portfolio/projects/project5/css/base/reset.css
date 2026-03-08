@@ -1,0 +1,9 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: clip;
+}

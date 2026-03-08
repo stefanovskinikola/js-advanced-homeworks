@@ -1,0 +1,32 @@
+footer .list-unstyled a.text-decoration-none {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+footer .list-unstyled a.text-decoration-none::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
+  background: var(--bs-primary);
+  transition: all 0.3s ease;
+}
+
+footer .list-unstyled a.text-decoration-none:hover {
+  color: var(--bs-primary) !important;
+}
+
+footer .list-unstyled a.text-decoration-none:hover::after {
+  width: 100%;
+}
+
+.footer-social-link {
+  transition: all 0.3s ease;
+}
+
+.footer-social-link:hover {
+  color: var(--bs-primary) !important;
+  transform: translateY(-2px);
+}

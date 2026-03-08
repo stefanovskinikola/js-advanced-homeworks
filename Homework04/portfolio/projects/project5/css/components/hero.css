@@ -1,0 +1,19 @@
+.hero-slide {
+  min-height: 85vh;
+}
+
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+.hero-slide-1 {
+  background: linear-gradient(135deg, #0f1117 0%, #2d1b4e 50%, #1a0a2e 100%);
+}
+
+.hero-slide-2 {
+  background: linear-gradient(135deg, #0f1117 0%, #0a2e1a 50%, #1a1d27 100%);
+}
+
+.hero-slide-3 {
+  background: linear-gradient(135deg, #0f1117 0%, #1b2d4e 50%, #111827 100%);
+}
